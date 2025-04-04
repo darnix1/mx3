@@ -1,12 +1,6 @@
 #!/bin/bash
-# //====================================================
-# //	System Request:Debian 9+/Ubuntu 18.04+/20+
-# //	Develovers >   LT
-# //	email > scvip293@gmail.com
-# //    telegram > https://t.me/LunaticTunnel
-# //    whatsapp > 082240074362
-# //====================================================
-# // LUNATIC TUNNELING
+
+
 red() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red='\033[0;31m'
 green='\033[0;32m'
@@ -56,10 +50,8 @@ tim2sec() {
     done
     echo "$res"
 }
-echo -e "━━━━━━━━━━━━━━━━━━━━━━━"
-echo -e "**⭐ CHECK VMESS LOGIN ⭐**"
-echo -e "━━━━━━━━━━━━━━━━━━━━━━━"
-marimakan=($(cat /etc/vmess/.vmess.db | grep '^###' | cut -d ' ' -f 2 | sort | uniq))
+echo -e "**◇━━━━━━━━━━━━━━━━━◇**"
+marimakan=($(cat /etc/xray/config.json | grep '^#vmg' | cut -d ' ' -f 2 | sort | uniq))
 echo -n >/tmp/rotate
 for db in ${marimakan[@]}; do
     logFile=$(cat /var/log/xray/access.log | grep -w "email: ${db}" | tail -n 150)
@@ -100,7 +92,7 @@ if [[ ${split} != "" ]]; then
                 echo -e "**Usage     :** ${gb}"
                 echo -e "**Limit     :** ${lim}"
                 echo -e "**IP Login  :** ${result}"
-                echo -e "**━━━━━━━━━━━━━━━━━**"
+                echo -e "**◇━━━━━━━━━━━━━━━━━◇**"
             fi
         fi
     done
